@@ -19,12 +19,12 @@ export class HomeComponent implements OnInit {
 
 	ngOnInit() : void {
 
-		// onInit grab array of map points
-		this.positions = this.getRandomMarkers();
+		// OnInit, make call to populate positions array thru the Observable
+		this.showMarkersFromObservable();
 	}
 
-	// this is a dummy example. In your app this is where you should bring
-	// in all the location points through your service
+	// This is a dummy example. This just creates random points for the map.
+	// Your points will come from your Hub Service
 	getRandomMarkers() : any {
 		let randomLat: number, randomLng: number;
 
@@ -38,8 +38,8 @@ export class HomeComponent implements OnInit {
 	}
 
 	// this is an example that uses an Observable - much like
-	// the call to your service. This works, and is called when
-	// the button is pushed...
+	// the call to your service. This works, and is called OnInit,
+	// and when the button is pushed too.
 	showMarkersFromObservable() {
 		Observable.of(this.getRandomMarkers()) // Think this as http call
 			.subscribe( positions => {
