@@ -1,0 +1,35 @@
+body {
+	/*background: url("app/images/creepy-octo-meow.jpg") no-repeat center center;
+	background-size: cover;
+	background-attachment: fixed;*/
+}
+
+button {
+	cursor: pointer;
+}
+
+/***
+* Flexbox Sticky Footer
+* http://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/
+***/
+
+/*corrects IE min-height bug*/
+html { display: flex;}
+body { width: 100%;}
+
+body.sfooter > * {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.sfooter-content {
+	flex: 1 0 auto;
+}
+
+/********************************
+* Splash Page
+*********************************/
+main.home {
+	height: 70vh;
+}
