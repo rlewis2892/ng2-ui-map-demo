@@ -1,7 +1,16 @@
-<div class="container">
+<div class="container my-4">
 	<div class="row">
 		<div class="col-12">
-			map here...
+
+			<h1 class="mb-3">Hey! It's a Google Map!1!!~</h1>
+
+			<!-- this is the google map :P~ -->
+			<ngui-map zoom="13" center="Brampton, Canada">
+				<marker *ngFor="let pos of positions" [position]="pos"></marker>
+			</ngui-map>
+
+			<!-- this calls random points thru an observable - this is relevant 4 U -->
+			<button class="mt-3" (click)="showMarkersFromObservable()">Show Random Markers From Observable</button>
 		</div>
 	</div>
 </div>
