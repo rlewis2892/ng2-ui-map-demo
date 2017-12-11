@@ -7,7 +7,6 @@ import {HomeComponent} from "./components/home.component";
 // import services
 import {AuthService} from "./services/auth-service";
 import {CookieService} from "ng2-cookies";
-import {SessionService} from "./services/session.service";
 
 // import interceptors
 import {APP_BASE_HREF} from "@angular/common";
@@ -28,8 +27,7 @@ export const routes: Routes = [
 // array of services
 const services: any[] = [
 	AuthService,
-	CookieService,
-	SessionService
+	CookieService
 ];
 
 // array of providers
